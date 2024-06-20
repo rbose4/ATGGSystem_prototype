@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css"/>
+    <title>Diagram with Audio Guided Navigation</title>
+  </head>
+  <body>
+    <h1 id="heading1">Diagram with Audio Guided Navigation</h1>
+    
+    <div class="diagram-container">
+        <div class="hotspot" id="part3"></div>
+        <img id="diagram" src="images/diagram1.png" alt="Diagram">
+        <div class="hotspot" id="part1"></div>
+        <div class="hotspot" id="part2"></div>
+        <!-- Add more hotspots as needed -->
+    </div>
+    <audio
+      id="audio"
+      src="audio/part1.mp3"
+    ></audio>
+    <audio
+      id="audio1"
+      src="audio/part3.mp3"
+    ></audio>
+    <!--  Keep Html Elements That need to grab in javaScript always on top of 
+    javaScript Code, So It is present to javaScript To Grab & Interact With.-->
+    <script>
+       <!-- Grabbing HTML Elements in JavaScript to Interact -->
+      const img = document.getElementById("part1");
+      const audio = document.getElementById("audio");
+      const hot = document.getElementById("part3");
+      const audio1 = document.getElementById("audio1");
+    //   <!-- listen for a 'mouseover' event in audio element -->
+      img.addEventListener("mouseover", () => {
+    //    <!--  when mouseover event happens we play the audio -->
+        audio.play();
+      });
+    //  <!--  listen for a 'mouseleave' event in audio element -->
+      img.addEventListener("mouseleave", () => {
+    //    <!--  when mouseleave event happens we pause the audio and make the audio duration 0 so it again run from start -->
+        audio.pause();
+        audio.currentTime = 0;
+      });
+      hot.addEventListener("mouseover", () => {
+        audio1.play();
+      });
+      hot.addEventListener("mouseleave", () => {
+        audio1.pause();
+        audio1.currentTime = 0;
+      });
+    </script>
+  </body>
+</html>
