@@ -1,40 +1,22 @@
-document.addEventListener('DOMContentLoaded', () => {  
-    const speechSynthesis = window.speechSynthesis;
-    let descriptions = {};
+document.addEventListener('DOMContentLoaded', () => {
+    const audioPlayer = document.getElementById('audioPlayer');
 
-    // Function to load and parse the text file
-    function loadTextFile(filename) {
-        return fetch(filename)
-            .then(response => response.text())
-            .then(text => {
-                const lines = text.split('\n');
-                lines.forEach(line => {
-                    const [id, description] = line.split(': ');
-                    if (id && description) {
-                        descriptions[id.trim()] = description.trim();
-                    }
-                });
-            })
-            .catch(error => console.error('Error loading text file:', error));
-    }
+    document.querySelectorAll('.hotspot').forEach(hotspot => {
+        const playAudio = () => {
+            const audioFile = hotspot.getAttribute('data-audio');
+            audioPlayer.src = audioFile;
+            audioPlayer.play();
+        };
 
-    // Function to play the text-to-speech audio
-    function playTextToSpeech(text) {
-        const utterance = new SpeechSynthesisUtterance(text);
-        speechSynthesis.speak(utterance);
-    }
+        const stopAudio = () => {
+            audioPlayer.pause();
+            audioPlayer.currentTime = 0;
+        };
 
-    // Load the text file and set up event listeners for the hotspots
-    loadTextFile('audio-guide.txt').then(() => {
-        for (const id in descriptions) {
-            const hotspot = document.getElementById(id);
-            if (hotspot) {
-                hotspot.addEventListener('mouseenter', () => playTextToSpeech(descriptions[id]));
-                hotspot.addEventListener('mouseleave', () => speechSynthesis.cancel());
+        hotspot.addEventListener('mouseenter', playAudio);
+        hotspot.addEventListener('mouseleave', stopAudio);
 
-                hotspot.addEventListener('touchstart', () => playTextToSpeech(descriptions[id]));
-                hotspot.addEventListener('touchend', () => speechSynthesis.cancel());
-            }
-        }
+        hotspot.addEventListener('touchstart', playAudio);
+        hotspot.addEventListener('touchend', stopAudio);
     });
 });
