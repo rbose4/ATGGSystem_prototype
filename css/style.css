@@ -15,22 +15,51 @@ body {
     cursor: pointer;
 }
 
-#part1 {
-    top: 50px;
+#overview {
+    top: -45px;
+    left: 300px;
+    width: 30px;
+    height: 30px;
+}
+
+#rnode1 {
+    top: 20px;
+    left: 300px;
+    width: 30px;
+    height: 30px;
+}
+
+#l1-node1 {
+    top: 200px;
     left: 100px;
     width: 30px;
     height: 30px;
 }
 
-#part2 {
-    top: 150px;
-    left: 200px;
+#l1-node2 {
+    top: 200px;
+    left: 280px;
     width: 30px;
     height: 30px;
 }
-#part3 {
-    top: -10px;
-    left: 300px;
+
+#l1-node3 {
+    top: 200px;
+    left: 490px;
+    width: 30px;
+    height: 30px;
+}
+
+#l2-node1 {
+    top: 370px;
+    left: 280px;
+    width: 30px;
+    height: 30px;
+}
+
+#l2-node2 {
+    top: 370px;
+    left: 560px;
     width: 30px;
     height: 30px;
 }
