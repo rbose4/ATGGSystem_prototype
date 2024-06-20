@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Load the text file and set up event listeners for the hotspots
-    loadTextFile('audio-guide.txt').then(() => {
+    loadTextFile('audio/audio-guide.txt').then(() => {
         for (const id in descriptions) {
             const hotspot = document.getElementById(id);
             if (hotspot) {
