@@ -1,5 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const audioPlayer = document.getElementById('audioPlayer');
+document.addEventListener('DOMContentLoaded', () => {  
     const speechSynthesis = window.speechSynthesis;
     let descriptions = {};
 
