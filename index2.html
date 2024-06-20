@@ -50,6 +50,13 @@
         audio1.pause();
         audio1.currentTime = 0;
       });
+      hot.addEventListener("touchstart", () => {
+        audio1.play();
+      });
+      hot.addEventListener("touchend", () => {
+        audio1.pause();
+        audio1.currentTime = 0;
+      });
     </script>
   </body>
 </html>
