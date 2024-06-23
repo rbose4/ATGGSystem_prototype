@@ -96,7 +96,7 @@
     //  <!--  listen for a 'mouseleave' event in audio element -->
       div_overview.addEventListener("touchend", () => {
     //    <!--  when mouseleave event happens we pause the audio and make the audio duration 0 so it again run from start -->
-        audio_overview.pause();
+        // audio_overview.pause();
         audio_overview.currentTime = 0;
       });
       //   <!-- root node - listen for a 'mouseover' event in audio element -->
@@ -104,7 +104,7 @@
         audio_rnode1.play();
       });
       hot_rnode1.addEventListener("touchend", () => {
-        // audio_rnode1.pause();
+        audio_rnode1.pause();
         audio_rnode1.currentTime = 0;
       });
       //   <!-- level1 node 1- listen for a 'mouseover' event in audio element -->
