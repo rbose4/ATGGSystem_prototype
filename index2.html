@@ -76,7 +76,17 @@
       const audio_l2node2 = document.getElementById("audio_l2node2");
 
 
-
+    //   <!-- listen for a 'mouseover' event in audio element -->
+    div_overview.addEventListener("mouseover", () => {
+    //    <!--  when mouseover event happens we play the audio -->
+        audio_overview.play();
+      });
+    //  <!--  listen for a 'mouseleave' event in audio element -->
+      div_overview.addEventListener("mouseleave", () => {
+    //    <!--  when mouseleave event happens we pause the audio and make the audio duration 0 so it again run from start -->
+        audio_overview.pause();
+        audio_overview.currentTime = 0;
+      });
 
     //   <!-- listen for a 'mouseover' event in audio element -->
       div_overview.addEventListener("touchstart", () => {
