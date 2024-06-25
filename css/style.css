@@ -1,6 +1,10 @@
 html, body {
     touch-action: manipulation;
     -ms-touch-action: manipulation;
+    -webkit-user-select: none; /* Disable text selection on Safari */
+    -ms-user-select: none; /* Disable text selection on IE10+ */
+    user-select: none; /* Disable text selection on standard-compliant browsers */
+    -webkit-touch-callout: none; /* Disable callout on long press on Safari */
 }
 
 body {
