@@ -35,6 +35,13 @@ body {
     height: 70px;
 }
 
+#doverview_startletter {
+    top: -60px;
+    left: 55px;
+    width: 70px;
+    height: 70px;
+}
+
 #rnode1 {
     top: 25px;
     left: 300px;
