@@ -93,6 +93,7 @@
       const audio_dl2node4 = document.getElementById("audio_dl2node4");
 
        //   <!-- listen for a 'mouseover' event in audio element -->
+       //   events for overview information
        div_doverview_startletter.addEventListener("mouseover", () => {
       //    <!--  when mouseover event happens we play the audio -->
         audio_doverview_startletter.play();
@@ -104,16 +105,25 @@
         audio_doverview_startletter.currentTime = 0;
       });
 
-    //   <!-- listen for a 'mouseover' event in audio element -->
+    //   <!-- listen for a 'touchstart' event in audio element -->
     div_doverview_startletter.addEventListener("touchstart", () => {
     //    <!--  when mouseover event happens we play the audio -->
         audio_doverview_startletter.play();
       });
-    //  <!--  listen for a 'mouseleave' event in audio element -->
+    //  <!--  listen for a 'touchend' event in audio element -->
     div_doverview_startletter.addEventListener("touchend", () => {
     //    <!--  when mouseleave event happens we pause the audio and make the audio duration 0 so it again run from start -->
         // audio_doverview_startletter.pause();
         // audio_doverview_startletter.currentTime = 0;
+      });
+
+      //   <!-- root node - listen for a 'touchstart' event in audio element -->
+      hot_drnode1.addEventListener("touchstart", () => {
+        audio_drnode1.play();
+      });
+      hot_drnode1.addEventListener("touchend", () => {
+        audio_drnode1.pause();
+        audio_drnode1.currentTime = 0;
       });
 
 
