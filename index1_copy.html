@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/style.css"/>
+    <title>Diagram with Audio Guided Navigation</title>
+  </head>
+  <body>
+    <h1 id="heading1">Family Tree</h1>
+    <div class="diagram-container">
+        <div class="hotspot" id="doverview_startletter"></div>
+        <div class="hotspot" id="doverview"></div>
+        <img id="diagram" src="images/dan_dia8.png" alt="Diagram">
+        
+        <div class="hotspot" id="drnode1"></div>
+        <div class="hotspot" id="dl1-node1"></div>
+        <div class="hotspot" id="dl1-node2"></div>
+        <div class="hotspot" id="dl1-node3"></div>
+        <div class="hotspot" id="dl2-node1"></div>
+        <div class="hotspot" id="dl2-node2"></div>
+        <div class="hotspot" id="dl2-node3"></div>
+        <div class="hotspot" id="dl2-node4"></div>
+        <!-- Add more hotspots as needed -->
+    </div>
+
+    <audio
+      id="audio_overview_dia"
+      src="audio/overview_dia_exp.mp3"
+    ></audio>
+    <audio
+      id="audio_drnode1"
+      src="audio/dan.mp3"
+    ></audio>
+    <audio
+    id="audio_dl1node1"
+    src="audio/lisa.mp3"
+    ></audio>
+    <audio
+    id="audio_dl1node2"
+    src="audio/mira.mp3"
+    ></audio>
+    <audio
+      id="audio_dl1node3"
+      src="audio/rob.mp3"
+    ></audio>
+    <audio
+      id="audio_dl2node1"
+      src="audio/Rhea.mp3"
+    ></audio>
+    <audio
+      id="audio_dl2node2"
+      src="audio/theo.mp3"
+    ></audio>
+    <audio
+      id="audio_dl2node3"
+      src="audio/nolan.mp3"
+    ></audio>
+    <audio
+      id="audio_dl2node4"
+      src="audio/xavi.mp3"
+    ></audio>
+
+    <script>
+      // <!-- Grabbing HTML Elements in JavaScript to Interact -->
+        // <!-- Grabbing Overview div Elements in JavaScript to Interact -->
+      const div_doverview_startletter = document.getElementById("doverview_startletter");
+      const audio_doverview_startletter  = document.getElementById("audio_overview_dia");
+
+      // <!-- Grabbing root node1 div Elements in JavaScript to Interact -->
+      const hot_drnode1 = document.getElementById("drnode1");
+      const audio_drnode1 = document.getElementById("audio_drnode1");
+      // <!-- Grabbing level1 node1 div Elements in JavaScript to Interact -->
+      const hot_dl1node1 = document.getElementById("dl1-node1");
+      const audio_dl1node1 = document.getElementById("audio_dl1node1");
+      // <!-- Grabbing level1 node2 div Elements in JavaScript to Interact -->
+      const hot_dl1node2 = document.getElementById("dl1-node2");
+      const audio_dl1node2 = document.getElementById("audio_dl1node2");
+      // <!-- Grabbing level1 node3 div Elements in JavaScript to Interact -->
+      const hot_dl1node3 = document.getElementById("dl1-node3");
+      const audio_dl1node3 = document.getElementById("audio_dl1node3");
+      // <!-- Grabbing level2 node1 div Elements in JavaScript to Interact -->
+      const hot_dl2node1 = document.getElementById("dl2-node1");
+      const audio_dl2node1 = document.getElementById("audio_dl2node1");
+      // <!-- Grabbing level2 node2 div Elements in JavaScript to Interact -->
+      const hot_dl2node2 = document.getElementById("dl2-node2");
+      const audio_dl2node2 = document.getElementById("audio_dl2node2");
+      // <!-- Grabbing level2 node3 div Elements in JavaScript to Interact -->
+      const hot_dl2node3 = document.getElementById("dl2-node3");
+      const audio_dl2node3 = document.getElementById("audio_dl2node3");
+      // <!-- Grabbing level2 node4 div Elements in JavaScript to Interact -->
+      const hot_dl2node4 = document.getElementById("dl2-node4");
+      const audio_dl2node4 = document.getElementById("audio_dl2node4");
+
+       //   <!-- listen for a 'mouseover' event in audio element -->
+       //   events for overview information
+       div_doverview_startletter.addEventListener("mouseover", () => {
+      //    <!--  when mouseover event happens we play the audio -->
+        audio_doverview_startletter.play();
+      });
+      //  <!--  listen for a 'mouseleave' event in audio element -->
+      div_doverview_startletter.addEventListener("mouseleave", () => {
+      //    <!--  when mouseleave event happens we pause the audio and make the audio duration 0 so it again run from start -->
+        audio_doverview_startletter.pause();
+        audio_doverview_startletter.currentTime = 0;
+      });
+
+    //   <!-- listen for a 'touchstart' event in audio element -->
+    div_doverview_startletter.addEventListener("touchstart", () => {
+    //    <!--  when mouseover event happens we play the audio -->
+        audio_doverview_startletter.play();
+      });
+    //  <!--  listen for a 'touchend' event in audio element -->
+    div_doverview_startletter.addEventListener("touchend", () => {
+    //    <!--  when mouseleave event happens we pause the audio and make the audio duration 0 so it again run from start -->
+        // audio_doverview_startletter.pause();
+        // audio_doverview_startletter.currentTime = 0;
+      });
+
+      //   <!-- root node - listen for a 'touchstart' event in audio element -->
+      hot_drnode1.addEventListener("touchstart", () => {
+        audio_drnode1.play();
+      });
+      hot_drnode1.addEventListener("touchend", () => {
+        //audio_drnode1.pause();
+        //audio_drnode1.currentTime = 0;
+      });
+
+      //   <!-- level1 node1 - listen for a 'touchstart' event in audio element -->
+      hot_dl1node1.addEventListener("touchstart", () => {
+        audio_dl1node1.play();
+      });
+      hot_dl1node1.addEventListener("touchend", () => {
+        //audio_dl1node1.pause();
+        //audio_dl1node1.currentTime = 0;
+      });
+
+      //   <!-- level1 node2 - listen for a 'touchstart' event in audio element -->
+      hot_dl1node2.addEventListener("touchstart", () => {
+        audio_dl1node2.play();
+      });
+      hot_dl1node2.addEventListener("touchend", () => {
+        //audio_dl1node2.pause();
+        //audio_dl1node2.currentTime = 0;
+      });
+       //   <!-- level1 node3 - listen for a 'touchstart' event in audio element -->
+       hot_dl1node3.addEventListener("touchstart", () => {
+        audio_dl1node3.play();
+      });
+      hot_dl1node3.addEventListener("touchend", () => {
+        //audio_dl1node3.pause();
+        //audio_dl1node3.currentTime = 0;
+      });
+
+      //   <!-- level2 node1 - listen for a 'touchstart' event in audio element -->
+      hot_dl2node1.addEventListener("touchstart", () => {
+        audio_dl2node1.play();
+      });
+      hot_dl2node1.addEventListener("touchend", () => {
+        //audio_dl2node1.pause();
+        //audio_dl2node1.currentTime = 0;
+      });
+
+      //   <!-- level2 node2 - listen for a 'touchstart' event in audio element -->
+      hot_dl2node2.addEventListener("touchstart", () => {
+        audio_dl2node2.play();
+      });
+      hot_dl2node2.addEventListener("touchend", () => {
+        //audio_dl2node2.pause();
+        //audio_dl2node2.currentTime = 0;
+      });
+
+      //   <!-- level2 node3 - listen for a 'touchstart' event in audio element -->
+      hot_dl2node3.addEventListener("touchstart", () => {
+        audio_dl2node3.play();
+      });
+      hot_dl2node3.addEventListener("touchend", () => {
+        //audio_dl2node3.pause();
+        //audio_dl2node3.currentTime = 0;
+      });
+
+      //   <!-- level2 node4 - listen for a 'touchstart' event in audio element -->
+      hot_dl2node4.addEventListener("touchstart", () => {
+        audio_dl2node4.play();
+      });
+      hot_dl2node4.addEventListener("touchend", () => {
+        //audio_dl2node4.pause();
+        //audio_dl2node4.currentTime = 0;
+      });
+
+      // Prevent default behavior for gesture events
+        document.addEventListener('gesturestart', function (e) {
+            e.preventDefault();
+        });
+
+        document.addEventListener('gesturechange', function (e) {
+            e.preventDefault();
+        });
+
+        document.addEventListener('gestureend', function (e) {
+            e.preventDefault();
+        });
+
+    </script>
+  </body>
