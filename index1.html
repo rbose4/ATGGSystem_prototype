@@ -118,12 +118,21 @@
       });
 
       //   <!-- root node - listen for a 'touchstart' event in audio element -->
-      hot_drnode1.addEventListener("touchstart", () => {
+      hot_dl1node1.addEventListener("touchstart", () => {
         audio_drnode1.play();
       });
-      hot_drnode1.addEventListener("touchend", () => {
+      hot_dl1node1.addEventListener("touchend", () => {
         //audio_drnode1.pause();
         //audio_drnode1.currentTime = 0;
+      });
+
+      //   <!-- level1 node1 - listen for a 'touchstart' event in audio element -->
+      hot_drnode1.addEventListener("touchstart", () => {
+        audio_dl1node1.play();
+      });
+      hot_drnode1.addEventListener("touchend", () => {
+        //audio_dl1node1.pause();
+        //audio_dl1node1.currentTime = 0;
       });
 
 
