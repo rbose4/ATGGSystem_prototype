@@ -23,4 +23,99 @@
         <div class="hotspot" id="dl2-node4"></div>
         <!-- Add more hotspots as needed -->
     </div>
+
+    <audio
+      id="audio_overview_dia"
+      src="audio/overview_dia_exp.mp3"
+    ></audio>
+    <audio
+      id="audio_drnode1"
+      src="audio/dan.mp3"
+    ></audio>
+    <audio
+    id="audio_dl1node1"
+    src="audio/lisa.mp3"
+    ></audio>
+    <audio
+    id="audio_dl1node2"
+    src="audio/mira.mp3"
+    ></audio>
+    <audio
+      id="audio_dl1node3"
+      src="audio/rob.mp3"
+    ></audio>
+    <audio
+      id="audio_dl2node1"
+      src="audio/Rhea.mp3"
+    ></audio>
+    <audio
+      id="audio_dl2node2"
+      src="audio/theo.mp3"
+    ></audio>
+    <audio
+      id="audio_dl2node3"
+      src="audio/nolan.mp3"
+    ></audio>
+    <audio
+      id="audio_dl2node4"
+      src="audio/xavi.mp3"
+    ></audio>
+
+    <script>
+      // <!-- Grabbing HTML Elements in JavaScript to Interact -->
+        // <!-- Grabbing Overview div Elements in JavaScript to Interact -->
+      const div_doverview_startletter = document.getElementById("doverview_startletter");
+      const audio_doverview_startletter  = document.getElementById("audio_overview_dia");
+
+      // <!-- Grabbing root node1 div Elements in JavaScript to Interact -->
+      const hot_drnode1 = document.getElementById("drnode1");
+      const audio_drnode1 = document.getElementById("audio_drnode1");
+      // <!-- Grabbing level1 node1 div Elements in JavaScript to Interact -->
+      const hot_dl1node1 = document.getElementById("dl1-node1");
+      const audio_dl1node1 = document.getElementById("audio_dl1node1");
+      // <!-- Grabbing level1 node2 div Elements in JavaScript to Interact -->
+      const hot_dl1node2 = document.getElementById("dl1-node2");
+      const audio_dl1node2 = document.getElementById("audio_dl1node2");
+      // <!-- Grabbing level1 node3 div Elements in JavaScript to Interact -->
+      const hot_dl1node3 = document.getElementById("dl1-node3");
+      const audio_dl1node3 = document.getElementById("audio_dl1node3");
+      // <!-- Grabbing level2 node1 div Elements in JavaScript to Interact -->
+      const hot_dl2node1 = document.getElementById("dl2-node1");
+      const audio_dl2node1 = document.getElementById("audio_dl2node1");
+      // <!-- Grabbing level2 node2 div Elements in JavaScript to Interact -->
+      const hot_dl2node2 = document.getElementById("dl2-node2");
+      const audio_dl2node2 = document.getElementById("audio_dl2node2");
+      // <!-- Grabbing level2 node3 div Elements in JavaScript to Interact -->
+      const hot_dl2node3 = document.getElementById("dl2-node3");
+      const audio_dl2node3 = document.getElementById("audio_dl2node3");
+      // <!-- Grabbing level2 node4 div Elements in JavaScript to Interact -->
+      const hot_dl2node4 = document.getElementById("dl2-node4");
+      const audio_dl2node4 = document.getElementById("audio_dl2node4");
+
+       //   <!-- listen for a 'mouseover' event in audio element -->
+       div_doverview_startletter.addEventListener("mouseover", () => {
+      //    <!--  when mouseover event happens we play the audio -->
+        audio_doverview_startletter.play();
+      });
+      //  <!--  listen for a 'mouseleave' event in audio element -->
+      div_doverview_startletter.addEventListener("mouseleave", () => {
+      //    <!--  when mouseleave event happens we pause the audio and make the audio duration 0 so it again run from start -->
+        audio_doverview_startletter.pause();
+        audio_doverview_startletter.currentTime = 0;
+      });
+
+    //   <!-- listen for a 'mouseover' event in audio element -->
+    div_doverview_startletter.addEventListener("touchstart", () => {
+    //    <!--  when mouseover event happens we play the audio -->
+        audio_doverview_startletter.play();
+      });
+    //  <!--  listen for a 'mouseleave' event in audio element -->
+    div_doverview_startletter.addEventListener("touchend", () => {
+    //    <!--  when mouseleave event happens we pause the audio and make the audio duration 0 so it again run from start -->
+        // audio_doverview_startletter.pause();
+        // audio_doverview_startletter.currentTime = 0;
+      });
+
+
+    </script>
   </body>
