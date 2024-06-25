@@ -86,7 +86,7 @@ body {
 
 #dl1-node3 {
     top: 260px;
-    left: 605px;
+    left: 615px;
     width: 95px;
     height: 95px;
 }
@@ -107,28 +107,28 @@ body {
 
 #dl2-node1 {
     top: 450px;
-    left: 205px;
+    left: 165px;
     width: 95px;
     height: 95px;
 }
 
 #dl2-node2 {
     top: 450px;
-    left: 295px;
+    left: 305px;
     width: 95px;
     height: 95px;
 }
 
 #dl2-node3 {
-    top: 425px;
+    top: 445px;
     left: 555px;
     width: 95px;
     height: 95px;
 }
 
 #dl2-node4 {
-    top: 425px;
-    left: 595px;
+    top: 445px;
+    left: 655px;
     width: 95px;
     height: 95px;
 }
